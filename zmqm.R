@@ -25,7 +25,7 @@ numFolds <- 5                  # Number of cross validation folds
 type <- "spatial"              # random or spatially blocked cross validation
 nboot <- 100                   # Number of bootstrap samples for uncertainty calculation
 calbg <- "no"                  # No to sampling background points (add code later if targeted background sampling is done)
-nbg <- 10000                   # number of background sampling points (n=10,000, Liu et al)
+nbg <- 10000                   # number of background sampling points (n=10,000, Liu et al. 2010)
 
 # Categorical variables
 facVars = "FW_mask"          # c('','') if more than one
@@ -118,7 +118,7 @@ cv <- CV( folds = numFolds)
 
 ## RUN MAXENT MODEL
 
-runmaxent <- function ( fold ){
+runmaxent <- function (fold){
   # require
   require(dismo)
   require(rJava)
